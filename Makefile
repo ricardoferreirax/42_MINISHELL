@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/28 18:34:39 by rmedeiro          #+#    #+#              #
-#    Updated: 2025/09/29 09:44:39 by rmedeiro         ###   ########.fr        #
+#    Updated: 2025/09/29 11:58:46 by pfreire-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,5 +49,7 @@ fclean: clean
 	$(MAKE) -C libft fclean
 
 re: fclean all
+
+e: all clean
 
 .PHONY: all clean fclean re

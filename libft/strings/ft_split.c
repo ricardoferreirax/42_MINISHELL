@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 13:58:54 by pfreire-          #+#    #+#             */
-/*   Updated: 2025/09/28 19:48:27 by rmedeiro         ###   ########.fr       */
+/*   Updated: 2025/09/29 12:01:29 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	**ft_split(char const *s, char c)
 	{
 		array[i] = ft_wordcpy(&s, c);
 		if (array[i] == NULL)
-			return (free_chararr(array), NULL);
+			return (free_2d((void **)array), NULL);
 		i++;
 	}
 	array[i] = NULL;

@@ -6,7 +6,7 @@
 /*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 15:19:52 by pfreire-          #+#    #+#             */
-/*   Updated: 2025/09/29 10:11:17 by pfreire-         ###   ########.fr       */
+/*   Updated: 2025/09/29 11:59:39 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define MINYANSHELL_H
 
 # include "../libft/libft.h"
-# include "parsing/parsing.h"
+//# include "parsing/parsing.h"
 # include <readline/history.h>
 # include <readline/readline.h>
 # include <stdbool.h>

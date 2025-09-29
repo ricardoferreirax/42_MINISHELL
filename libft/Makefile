@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 16:26:27 by pfreire-          #+#    #+#              #
-#    Updated: 2025/09/28 19:40:31 by rmedeiro         ###   ########.fr        #
+#    Updated: 2025/09/29 12:04:21 by pfreire-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
