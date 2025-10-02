@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   split_quotes.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 18:40:11 by rmedeiro          #+#    #+#             */
-/*   Updated: 2025/09/28 18:40:41 by rmedeiro         ###   ########.fr       */
+/*   Updated: 2025/10/01 09:21:09 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MiNyanShell.h"
-#include "execution.h"
+#include "../MiNyanShell.h"
+#include "../execution/execution.h"
 
 static void	quote_check(char c, char *quote)
 {

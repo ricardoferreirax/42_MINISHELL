@@ -13,10 +13,10 @@
 #ifndef FT_STRINGS_H
 # define FT_STRINGS_H
 
-# include "stdbool.h"
-# include "unistd.h"
-# include "stdlib.h"
 # include "../memory/memory.h"
+# include "stdbool.h"
+# include "stdlib.h"
+# include "unistd.h"
 
 int				ft_count_words(char const *s, char c);
 char			**ft_split(char const *s, char c);

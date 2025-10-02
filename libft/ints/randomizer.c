@@ -26,7 +26,7 @@ int	randomizer(void)
 	entropy = ((unsigned int)(uintptr_t)&x) ^ ((unsigned int)(uintptr_t)&y);
 	entropy ^= i * 2654435761;
 	entropy = (entropy >> (i % 5)) ^ (entropy << (i % 3));
-	entropy += (unsigned int)((uintptr_t)k) *(unsigned int)((uintptr_t) & i);
+	entropy += (unsigned int)((uintptr_t)k) * (unsigned int)((uintptr_t)&i);
 	i += 17;
 	free(k);
 	return (entropy);

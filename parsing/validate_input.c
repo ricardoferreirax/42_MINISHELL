@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   validate_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 23:46:47 by rmedeiro          #+#    #+#             */
-/*   Updated: 2025/09/29 00:11:30 by rmedeiro         ###   ########.fr       */
+/*   Updated: 2025/09/30 17:12:47 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/MiNyanShell.h"
-#include "../include/parsing.h"
+#include "../MiNyanShell.h"
+#include "parsing.h"
 
 bool no_forbidden_actions(char *str)
 {

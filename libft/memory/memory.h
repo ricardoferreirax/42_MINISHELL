@@ -6,11 +6,15 @@
 /*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 11:47:13 by pfreire-          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2025/09/29 12:00:03 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*   Updated: 2025/09/28 19:47:56 by rmedeiro         ###   ########.fr       */
+=======
+/*   Updated: 2025/09/29 10:49:46 by pfreire-         ###   ########.fr       */
+>>>>>>> ricardo
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +28,7 @@
 
 void	ft_bzero(void *a, size_t i);
 void	*ft_calloc(size_t nmemb, size_t size);
-void    free_chararr(char **arr);
+void	free_chararr(char **arr);
 void	*ft_memchr(const void *a, int b, size_t c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t i);

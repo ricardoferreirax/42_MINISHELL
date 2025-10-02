@@ -16,11 +16,11 @@ void	ft_putunbr(unsigned int nb)
 {
 	if (nb >= 10)
 	{
-		ft_putunbr (nb / 10);
-		ft_putunbr (nb % 10);
+		ft_putunbr(nb / 10);
+		ft_putunbr(nb % 10);
 	}
 	if (nb < 10)
 	{
-		ft_putchar (nb + '0');
+		ft_putchar(nb + '0');
 	}
 }

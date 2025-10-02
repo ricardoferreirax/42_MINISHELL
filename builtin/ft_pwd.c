@@ -3,62 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pwd.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 22:31:07 by rmedeiro          #+#    #+#             */
-/*   Updated: 2025/09/28 19:01:40 by rmedeiro         ###   ########.fr       */
+/*   Updated: 2025/10/01 11:34:33 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/MiNyanShell.h"
-#include "../include/execution.h"
-#include "../include/builtin.h"
+#include "../MiNyanShell.h"
+#include "builtin.h"
+#include "../execution/execution.h"
 
-static int print_pwd_from_env(char **env)
+static int	print_pwd_from_env(char **env)
 {
-    int i;
+	int	i;
 
-    if (!env)
-        return (1);
-    i = 0;
-    while (env[i])
-    {
-        if (ft_strncmp(env[i], "PWD=", 4) == 0)
-        {
-            ft_putstr_fd(env[i] + 4, STDOUT_FILENO);
-            write(STDOUT_FILENO, "\n", 1);
-            return (0);
-        }
-        i++;
-    }
-    ft_putstr_fd("MiNyanShell: pwd: PWD not set", STDERR_FILENO);
-    write(STDERR_FILENO, "\n", 1);
-    return (1);
+	if (!env)
+		return (1);
+	i = 0;
+	while (env[i])
+	{
+		if (ft_strncmp(env[i], "PWD=", 4) == 0)
+		{
+			ft_putstr_fd(env[i] + 4, STDOUT_FILENO);
+			write(STDOUT_FILENO, "\n", 1);
+			return (0);
+		}
+		i++;
+	}
+	ft_putstr_fd("MiNyanShell: pwd: PWD not set", STDERR_FILENO);
+	write(STDERR_FILENO, "\n", 1);
+	return (1);
 }
 
-int ft_pwd(t_subcmd *subcmd, t_mini *mini)
+int	ft_pwd(t_subcmd *subcmd, t_mini *mini)
 {
-    char *cwd;
-    int   status;
+	char	*cwd;
+	int		status;
 
-    if (subcmd->args[1] && subcmd->args[1][0] == '-')
-    {
-        ft_putstr_fd("MiNyanShell: pwd: options are not supported", STDERR_FILENO);
-        write(STDERR_FILENO, "\n", 1);
-        mini->last_status = 1;
-        return (1);
-    }
-    cwd = getcwd(NULL, 0);  // 
-    if (!cwd)
-    {
-        status = print_pwd_from_env(mini->env);
-        mini->last_status = status;
-        return (status);
-    }
-    ft_putstr_fd(cwd, STDOUT_FILENO);
-    write(STDOUT_FILENO, "\n", 1);
-    free(cwd);
-    mini->last_status = 0;
-    return (0);
+	if (subcmd->args[1] && subcmd->args[1][0] == '-')
+	{
+		ft_putstr_fd("MiNyanShell: pwd: options are not supported",
+			STDERR_FILENO);
+		write(STDERR_FILENO, "\n", 1);
+		mini->last_status = 1;
+		return (1);
+	}
+	cwd = getcwd(NULL, 0); //
+	if (!cwd)
+	{
+		status = print_pwd_from_env(mini->env);
+		mini->last_status = status;
+		return (status);
+	}
+	ft_putstr_fd(cwd, STDOUT_FILENO);
+	write(STDOUT_FILENO, "\n", 1);
+	free(cwd);
+	mini->last_status = 0;
+	return (0);
 }
-

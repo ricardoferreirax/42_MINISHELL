@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_3d.c                                          :+:      :+:    :+:   */
+/*   envyan.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/25 12:03:40 by pfreire-          #+#    #+#             */
-/*   Updated: 2025/09/25 12:05:41 by pfreire-         ###   ########.fr       */
+/*   Created: 2025/10/01 16:10:15 by rmedeiro          #+#    #+#             */
+/*   Updated: 2025/10/02 15:10:07 by rmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "memory.h"
+#ifndef ENVYAN_H
+# define ENVYAN_H
 
-void	free_3d(void ***arr)
+typedef struct s_envp
 {
-	int i;
+	char			*key;
+	char			*value;
+	struct s_envp	*next;
+}	t_envp;
 
-	i = 0;
-	if (!arr)
-		return ;
-	while (arr[i])
-	{
-		free_2d(arr[i]);
-		i++;
-	}
-	free(arr);
-}
+t_envp *envyan_list(char **envp);
+void    free_envyan_list(t_envp *head);
+
+#endif

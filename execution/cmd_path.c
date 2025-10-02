@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   cmd_path.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmedeiro <rmedeiro@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 16:11:22 by rmedeiro          #+#    #+#             */
-/*   Updated: 2025/09/28 18:46:03 by rmedeiro         ###   ########.fr       */
+/*   Updated: 2025/09/30 17:21:49 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/MiNyanShell.h"
-#include "../include/execution.h"
+#include "../MiNyanShell.h"
+#include "execution.h"
 
 static char	*ft_join_dir_cmd(char *path_dir, char *cmd)
 {
@@ -82,19 +82,19 @@ static char	*ft_cmd_path(char *cmd, char **envp)
 	return (NULL);
 }
 
-static int check_cmd_access(char *cmd)
+static int	check_cmd_access(char *cmd)
 {
-    if (access(cmd, F_OK) != 0) 
+	if (access(cmd, F_OK) != 0)
 	{
-        errno = ENOENT;
-        return (127);
-    }
-    if (access(cmd, X_OK) != 0) 
+		errno = ENOENT;
+		return (127);
+	}
+	if (access(cmd, X_OK) != 0)
 	{
-        errno = EACCES;
-        return (126);
-    }
-    return (0);
+		errno = EACCES;
+		return (126);
+	}
+	return (0);
 }
 
 char	*handle_cmd_path(char *cmd, char **envp)
@@ -103,7 +103,7 @@ char	*handle_cmd_path(char *cmd, char **envp)
 	int		code;
 
 	if (!cmd)
-		return (NULL);	
+		return (NULL);
 	if (ft_strchr(cmd, '/'))
 	{
 		code = check_cmd_access(cmd);
