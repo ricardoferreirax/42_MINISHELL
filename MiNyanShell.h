@@ -6,23 +6,15 @@
 /*   By: pfreire- <pfreire-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 15:19:52 by pfreire-          #+#    #+#             */
-<<<<<<< HEAD:include/MiNyanShell.h
-/*   Updated: 2025/09/29 15:14:33 by pfreire-         ###   ########.fr       */
-=======
-/*   Updated: 2025/10/02 15:23:55 by rmedeiro         ###   ########.fr       */
->>>>>>> ricardo:MiNyanShell.h
+/*   Updated: 2025/10/02 15:31:33 by pfreire-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINYANSHELL_H
 # define MINYANSHELL_H
 
-<<<<<<< HEAD:include/MiNyanShell.h
-# include "../libft/libft.h"
-=======
 # include "libft/libft.h"
 # include "environ/envyan.h" 
->>>>>>> ricardo:MiNyanShell.h
 # include <readline/history.h>
 # include <readline/readline.h>
 # include <stdbool.h>
